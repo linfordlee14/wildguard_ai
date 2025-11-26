@@ -1,0 +1,33 @@
+[{
+        "rhino_id": "RH001",
+        "timestamp_utc": "2024-01-15T08:30:00Z",
+        "latitude": -25.7461,
+        "longitude": 28.1881,
+        "speed_kmh": 2.3,
+        "heading": 45
+    },
+    {
+        "rhino_id": "RH001",
+        "timestamp_utc": "2024-01-15T09:00:00Z",
+        "latitude": -25.7465,
+        "longitude": 28.1885,
+        "speed_kmh": 0.1,
+        "heading": 45
+    },
+    {
+        "rhino_id": "RH002",
+        "timestamp_utc": "2024-01-15T08:45:00Z",
+        "latitude": -25.7500,
+        "longitude": 28.1900,
+        "speed_kmh": 3.1,
+        "heading": 120
+    },
+    {
+        "rhino_id": "RH002",
+        "timestamp_utc": "2024-01-15T09:15:00Z",
+        "latitude": -25.7505,
+        "longitude": 28.1905,
+        "speed_kmh": 0.0,
+        "heading": 120
+    }
+]

@@ -1,0 +1,41 @@
+{
+    "wildguard": {
+        "system": "You are WildGuard AI, an assistant for wildlife conservation.",
+        "agents": {
+            "planner": {
+                "role": "Strategic wildlife conservation planner",
+                "expertise": "Ranger deployment, resource allocation, tactical planning",
+                "temperature": 0.3
+            },
+            "movement_analyst": {
+                "role": "Wildlife behavior and movement pattern expert",
+                "expertise": "Animal tracking, anomaly detection, behavioral analysis",
+                "temperature": 0.2
+            },
+            "vision_analyst": {
+                "role": "Forensic analyst for wildlife crime detection",
+                "expertise": "Camera trap analysis, visual evidence assessment",
+                "temperature": 0.2
+            },
+            "risk_scorer": {
+                "role": "Risk assessment specialist",
+                "expertise": "Threat evaluation, scoring validation, false positive reduction",
+                "temperature": 0.1
+            },
+            "report_generator": {
+                "role": "Conservation operations coordinator",
+                "expertise": "Professional briefings, field communication, action planning",
+                "temperature": 0.2
+            }
+        },
+        "templates": [{
+                "name": "threat_assessment",
+                "prompt": "Analyze wildlife data for poaching threats and provide actionable intelligence."
+            },
+            {
+                "name": "ranger_briefing",
+                "prompt": "Generate professional ranger briefing with deployment recommendations."
+            }
+        ]
+    }
+}
