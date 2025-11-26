@@ -27,6 +27,10 @@ interface AppState {
   commandPaletteOpen: boolean
   setCommandPaletteOpen: (open: boolean) => void
   
+  // Mobile Sidebar
+  sidebarOpen: boolean
+  setSidebarOpen: (open: boolean) => void
+  
   // Notifications
   notifications: Array<{
     id: string
@@ -63,6 +67,10 @@ export const useStore = create<AppState>()(
       // Command Palette
       commandPaletteOpen: false,
       setCommandPaletteOpen: (open) => set({ commandPaletteOpen: open }),
+      
+      // Mobile Sidebar
+      sidebarOpen: false,
+      setSidebarOpen: (open) => set({ sidebarOpen: open }),
       
       // Notifications
       notifications: [],

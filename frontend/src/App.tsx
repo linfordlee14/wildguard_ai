@@ -27,13 +27,29 @@ const views = {
 }
 
 function AppContent() {
-  const { selectedView } = useStore()
+  const { selectedView, sidebarOpen, setSidebarOpen } = useStore()
   const CurrentView = views[selectedView as keyof typeof views] || Dashboard
 
   return (
     <div className="flex h-screen bg-background text-foreground">
-      <Sidebar />
-      <div className="flex-1 flex flex-col overflow-hidden">
+      {/* Mobile overlay */}
+      {sidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+      
+      {/* Sidebar - hidden on mobile by default */}
+      <div className={cn(
+        "fixed lg:relative inset-y-0 left-0 z-50 lg:z-0",
+        "transform transition-transform duration-300 ease-in-out",
+        sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+      )}>
+        <Sidebar />
+      </div>
+      
+      <div className="flex-1 flex flex-col overflow-hidden w-full">
         <Header />
         <main className="flex-1 overflow-auto">
           <AnimatePresence mode="wait">

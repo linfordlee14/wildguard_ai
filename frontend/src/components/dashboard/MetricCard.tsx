@@ -73,20 +73,20 @@ export function MetricCard({
       className={className}
     >
       <Card className={cn("border-2 transition-all duration-300 hover:shadow-lg", colorMap[color])}>
-        <CardContent className="p-6">
-          <div className="flex items-center justify-between">
-            <div className="space-y-2">
-              <p className="text-sm font-medium text-muted-foreground">{title}</p>
-              <div className="flex items-baseline gap-2">
+        <CardContent className="p-3 lg:p-6">
+          <div className="flex items-center justify-between gap-2">
+            <div className="space-y-1 lg:space-y-2 min-w-0 flex-1">
+              <p className="text-xs lg:text-sm font-medium text-muted-foreground truncate">{title}</p>
+              <div className="flex flex-col lg:flex-row lg:items-baseline gap-1 lg:gap-2">
                 <motion.span 
-                  className="text-3xl font-bold animate-counter"
+                  className="text-xl lg:text-3xl font-bold animate-counter"
                   key={value}
                 >
                   {Math.round(displayValue).toLocaleString()}{suffix}
                 </motion.span>
                 {previousValue !== undefined && (
                   <span className={cn(
-                    "text-sm font-medium",
+                    "text-[10px] lg:text-sm font-medium",
                     isIncreasing ? "text-green-500" : change < 0 ? "text-red-500" : "text-muted-foreground"
                   )}>
                     {change > 0 ? '+' : ''}{change} ({changePercent}%)
@@ -95,10 +95,10 @@ export function MetricCard({
               </div>
             </div>
             <div className={cn(
-              "flex items-center justify-center w-12 h-12 rounded-lg",
+              "flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 rounded-lg flex-shrink-0",
               colorMap[color]
             )}>
-              <Icon className="w-6 h-6" />
+              <Icon className="w-5 h-5 lg:w-6 lg:h-6" />
             </div>
           </div>
         </CardContent>
