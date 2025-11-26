@@ -23,10 +23,9 @@ CORS(app, origins=allowed_origins, supports_credentials=True)
 # Configuration
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file upload
 
-# Load data - use absolute path for deployment
+# Load data from local data folder
 import pathlib
-BASE_DIR = pathlib.Path(__file__).parent.parent
-DATA_DIR = BASE_DIR / 'data'
+DATA_DIR = pathlib.Path(__file__).parent / 'data'
 
 with open(DATA_DIR / 'wildguard_simulated_tracks.json', 'r') as f:
     WILDLIFE_DATA = json.load(f)
