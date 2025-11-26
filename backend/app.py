@@ -11,16 +11,27 @@ from routes import movement, vision, scoring, report, orchestrate, agents
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+
+# CORS configuration - allow frontend origins
+allowed_origins = [
+    'http://localhost:3000',  # Local development
+    'https://*.vercel.app',   # Vercel preview deployments
+    os.getenv('FRONTEND_URL', '*')  # Production frontend URL
+]
+CORS(app, origins=allowed_origins, supports_credentials=True)
 
 # Configuration
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file upload
 
-# Load data
-with open('../data/wildguard_simulated_tracks.json', 'r') as f:
+# Load data - use absolute path for deployment
+import pathlib
+BASE_DIR = pathlib.Path(__file__).parent.parent
+DATA_DIR = BASE_DIR / 'data'
+
+with open(DATA_DIR / 'wildguard_simulated_tracks.json', 'r') as f:
     WILDLIFE_DATA = json.load(f)
 
-with open('../data/hotspots.json', 'r') as f:
+with open(DATA_DIR / 'hotspots.json', 'r') as f:
     HOTSPOTS = json.load(f)
 
 # ==================== HEALTH CHECK ====================
