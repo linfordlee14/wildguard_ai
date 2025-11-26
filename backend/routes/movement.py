@@ -1,4 +1,4 @@
-import numpy as np
+import math
 from datetime import datetime, timedelta
 
 def detect_anomalies(wildlife_data, hotspots):
@@ -25,7 +25,8 @@ def detect_anomalies(wildlife_data, hotspots):
     baselines = {}
     for rid, tracks in rhino_tracks.items():
         speeds = [t.get('speed_kmh', 0) for t in tracks]
-        baselines[rid] = np.mean([s for s in speeds if s > 0.1])
+        valid_speeds = [s for s in speeds if s > 0.1]
+        baselines[rid] = sum(valid_speeds) / len(valid_speeds) if valid_speeds else 1.0
     
     # Detect anomalies
     hotspot_coords = [(h['latitude'], h['longitude']) for h in hotspots.get('hotspots', [])]
@@ -51,7 +52,7 @@ def detect_anomalies(wildlife_data, hotspots):
             
             # Check proximity to hotspots
             for h_lat, h_lon in hotspot_coords:
-                dist = np.sqrt((lat - h_lat)**2 + (lon - h_lon)**2)
+                dist = math.sqrt((lat - h_lat)**2 + (lon - h_lon)**2)
                 if dist < 0.01:  # ~1km
                     anomaly_detected = True
                     reasons.append('near_hotspot')
