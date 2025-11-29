@@ -11,9 +11,6 @@ An autonomous, multi-agent AI system that protects endangered species like the B
 
 Protect endangered species using autonomous multi-agent AI systems. WildGuard AI detects poaching threats in real-time, analyzes wildlife data, and guides ranger response to save Black Rhinos and other endangered animals.
 
-**Currently monitoring**: Black Rhino populations  
-**Scalable to**: All endangered species (elephants, tigers, cheetahs, etc.)  
-**Built in**: 5 days with Kiro + Amazon Q Developer  
 ---
 **Built for:** AWS Global Vibe: AI Coding Hackathon (DoraHacks)  
 **Status:** Production-Ready & Deployed  
