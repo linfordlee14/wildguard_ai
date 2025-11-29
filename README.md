@@ -2,6 +2,19 @@
 
 An autonomous, multi-agent AI system that protects endangered species like the Black Rhino from poaching through real-time threat detection and intelligent data analysis.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![AWS Vibe Hackathon 2025](https://img.shields.io/badge/AWS%20Vibe-Hackathon%202025-orange)](https://www.buildonaws.com/)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![React 18+](https://img.shields.io/badge/React-18+-61DAFB.svg)](https://reactjs.org/)
+
+## 🌍 Mission
+
+Protect endangered species using autonomous multi-agent AI systems. WildGuard AI detects poaching threats in real-time, analyzes wildlife data, and guides ranger response to save Black Rhinos and other endangered animals.
+
+**Currently monitoring**: Black Rhino populations  
+**Scalable to**: All endangered species (elephants, tigers, cheetahs, etc.)  
+**Built in**: 5 days with Kiro + Amazon Q Developer  
+---
 **Built for:** AWS Global Vibe: AI Coding Hackathon (DoraHacks)  
 **Status:** Production-Ready & Deployed  
 **Live Demo:** https://wildguard-ai.vercel.app  
@@ -9,11 +22,13 @@ An autonomous, multi-agent AI system that protects endangered species like the B
 
 ---
 
+
+
 ## 🚀 Quick Links
 
 - **Live Frontend:** https://wildguard-ai.vercel.app
 - **Backend API:** https://wildguard-ai-backend.up.railway.app
-- **Demo Video:** [YouTube Link - Add Your URL Here]
+- **Demo Video:** [[YouTube Link - Add Your URL Here]](https://youtu.be/WA7sPtTsx2c)
 - **Developer:** Linford Musiyambodza (@hacker1401)
 
 ---
