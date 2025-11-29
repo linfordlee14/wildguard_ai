@@ -15,7 +15,7 @@ Protect endangered species using autonomous multi-agent AI systems. WildGuard AI
 **Built for:** AWS Global Vibe: AI Coding Hackathon (DoraHacks)  
 **Status:** Production-Ready & Deployed  
 **Live Demo:** https://wildguard-ai.vercel.app  
-**GitHub:** https://github.com/linfordlee14/wildguard-ai
+**GitHub:** https://github.com/linfordlee14/wildguard_ai
 
 ---
 
