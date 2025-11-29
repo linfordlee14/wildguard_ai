@@ -28,7 +28,7 @@ Protect endangered species using autonomous multi-agent AI systems. WildGuard AI
 
 - **Live Frontend:** https://wildguard-ai.vercel.app
 - **Backend API:** https://wildguard-ai-backend.up.railway.app
-- **Demo Video:** [[YouTube Link - Add Your URL Here]](https://youtu.be/WA7sPtTsx2c)
+- **Demo Video:** [[https://youtu.be/WA7sPtTsx2c]]
 - **Developer:** Linford Musiyambodza (@hacker1401)
 
 ---
